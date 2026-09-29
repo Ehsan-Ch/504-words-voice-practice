@@ -37,5 +37,12 @@
     "manual_acceptance_scenarios": 20,
     "live_voice_scenarios_run": 0
   },
-  "full_transcription_batch_rerun": false
+  "full_transcription_batch_rerun": false,
+  "hosted_checks": {
+    "workflow": "Checks",
+    "initial_run_url": "https://github.com/Ehsan-Ch/504-words-voice-practice/actions/runs/36549503027",
+    "jobs_configured": 4,
+    "jobs_started": 0,
+    "result": "Hosted execution unavailable for the account; cross-platform matrix unverified"
+  }
 }

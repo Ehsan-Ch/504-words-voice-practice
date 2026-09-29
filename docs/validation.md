@@ -64,9 +64,12 @@ python -m voice_practice --help
 python scripts/check_public_files.py
 ```
 
-The GitHub Actions workflow runs these checks on Windows and Ubuntu with Python
-3.11 and 3.12. Configured coverage is not a claim that every hosted job has passed;
-the actual workflow result must be read from GitHub.
+The GitHub Actions workflow is configured for Windows and Ubuntu with Python
+3.11 and 3.12. In the [initial hosted run](https://github.com/Ehsan-Ch/504-words-voice-practice/actions/runs/36549503027),
+the platform did not start any of the four jobs because hosted execution was
+unavailable for the account. This is not a test assertion failure, and it is
+not a passing cross-platform result. The local results above are verified;
+the hosted matrix remains unverified until the workflow can run.
 
 ## Prompt review
 
