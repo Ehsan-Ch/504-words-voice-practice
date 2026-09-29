@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "504-words-voice-practice"
+version = "1.0.0"
+description = "A portable voice-teaching prompt and a reproducible whisper.cpp transcription pipeline"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Ehsan Cheraghi"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Education",
+]
+
+[project.urls]
+Repository = "https://github.com/Ehsan-Ch/504-words-voice-practice"
+
+[project.scripts]
+voice-practice = "voice_practice.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

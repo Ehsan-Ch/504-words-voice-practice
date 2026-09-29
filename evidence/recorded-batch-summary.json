@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "description": "Sanitized aggregates from private historical records and a read-only publication audit; not an accuracy evaluation.",
+  "historical_record": {
+    "summary_filename": "batch_summary.json",
+    "total": 1453,
+    "completed_this_run": 1453,
+    "already_complete": 0,
+    "failed_this_run": 0,
+    "started_at_local_unzoned": "2026-09-27T14:02:05",
+    "updated_at_local_unzoned": "2026-09-27T18:40:57"
+  },
+  "runtime_categories": [
+    {"kind": "clip", "language": "en", "mode": "single", "count": 1275},
+    {"kind": "voice", "language": "en", "mode": "single", "count": 42},
+    {"kind": "voice", "language": "fa", "mode": "single", "count": 126},
+    {"kind": "review", "language": "fa", "mode": "windowed_review", "count": 9},
+    {"kind": "help", "language": "fa", "mode": "single", "count": 1}
+  ],
+  "final_configuration": {
+    "model_filename": "ggml-large-v3.bin",
+    "backend": "Vulkan",
+    "device": 0,
+    "max_context": 64,
+    "vad": false,
+    "initial_prompt": false,
+    "sample_rate_hz": 16000,
+    "channels": 1,
+    "audio_codec": "pcm_s16le",
+    "window_seconds": 60,
+    "step_seconds": 30,
+    "silence_noise": "-35dB",
+    "silence_min_seconds": 0.25,
+    "max_edge_error_seconds": 1.6,
+    "maximum_attempts": 3,
+    "final_formats": ["json", "txt"]
+  },
+  "audit": {
+    "date": "2026-09-28",
+    "reran_full_corpus": false,
+    "m4a_files": 178,
+    "mp4_files": 1275,
+    "lesson_directories": 42,
+    "lesson_directories_with_one_pdf_and_four_voice_files": 42,
+    "all_source_pdfs": 51,
+    "guide_lesson_blocks": 42,
+    "guide_target_entries_per_lesson": 12,
+    "guide_target_entries_total": 504,
+    "unique_manifest_sources": 1453,
+    "unique_output_sources": 1453,
+    "manifest_output_source_set_differences": 0,
+    "missing_sources_after_known_root_relocation": 0,
+    "job_directories": 1453,
+    "source_json_parse_failures": 0,
+    "final_json_parse_failures": 0,
+    "final_metadata_mismatches": 0,
+    "empty_transcription_arrays": 0,
+    "missing_final_txt": 0,
+    "txt_json_text_mismatches_after_line_ending_normalization": 0,
+    "transcript_segments": 37413,
+    "negative_or_reversed_timestamps": 0,
+    "backward_segment_starts": 0,
+    "review_windows": 1080,
+    "review_joins": 1071,
+    "review_join_methods": {"hybrid_safe": 1039, "fallback_min_edge": 32},
+    "full_pdf_content_audit_repeated": false,
+    "accuracy_score": null
+  },
+  "resolved_discrepancies": [
+    "Manifest labels all 168 lesson voice files Persian; final runtime classification and output metadata route 42 Text recordings to English.",
+    "The earlier script mirrored folders; the final runner used hashed job directories and preserved source hierarchy in metadata.",
+    "Saved absolute paths refer to the pre-relocation source root; original files were left unchanged.",
+    "Extracted final runner, launcher and README were available; no separate 504_batch_runner.zip was found in searched Downloads and GPU locations."
+  ],
+  "original_sha256": {
+    "run_all_504.py": "050543a76106ac632317ce5f991573766c03fb1ce9abb06ada2a6eb9b62092ce",
+    "batch_summary.json": "5030105fb71de19612596bcb7943909c46d42e7919b8956987e06097e064e990",
+    "batch_run.log": "a493e7ded21d5c00ac1199f9f8c6f6643bf1be45525bdc87324bf907793e2199",
+    "processing_manifest.jsonl": "c1243ff20adcf641fad79e5249f072868c6d9b75683d535d5c749ab9e95186c3",
+    "504_Words_Voice_Teaching_System_Portable_Master_Guide.md": "d187656168d250c5a7b2afcd93012824502ec2ce6cf4b3a5136e1445a93e1423"
+  }
+}

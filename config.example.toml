@@ -1,0 +1,27 @@
+# Copy to config.toml and edit paths before use. Do not commit your local config.
+# Relative paths resolve beside this TOML file, not the shell's working directory.
+# Use forward slashes or TOML single-quoted strings for Windows paths.
+[paths]
+input_root = "../private-course"
+output_root = "../private-results"
+# This resolved path must contain ASCII characters only. If your project lives
+# under a Unicode path, select a separate ASCII directory such as C:/voice-work.
+work_root = ".work"
+whisper = "../tools/whisper.cpp/build-vulkan/bin/Release/whisper-cli.exe"
+model = "../tools/whisper.cpp/models/ggml-large-v3.bin"
+ffmpeg = "ffmpeg"
+ffprobe = "ffprobe"
+
+[transcription]
+# Validated lesson baseline: Vulkan device 0, -mc 64, no VAD/initial prompt.
+device = 0
+max_context = 64
+# Long reviews: 60-second windows starting every 30 seconds (30-second overlap).
+window_seconds = 60.0
+step_seconds = 30.0
+max_edge_error = 1.6
+silence_noise = "-35dB"
+silence_min = 0.25
+max_attempts = 3
+# JSON/TXT are always written. SRT/VTT are new optional exporters.
+formats = ["json", "txt"]

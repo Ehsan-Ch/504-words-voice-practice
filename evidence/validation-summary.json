@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "validation_dates": ["2026-09-28", "2026-09-29"],
+  "local_environment": {"os": "Windows", "python": "3.12.9", "ffmpeg": "9.0.1"},
+  "automated_tests": {
+    "discovered": 41,
+    "passed": 40,
+    "skipped": 1,
+    "failures": 0,
+    "skip_reason": "Windows directory-symlink creation privilege unavailable",
+    "private_course_data_required": false,
+    "gpu_required": false
+  },
+  "gpu_smoke": {
+    "date": "2026-09-28",
+    "gpu": "AMD Radeon RX 7800 XT",
+    "backend_reported": "Vulkan0",
+    "model_filename": "ggml-large-v3.bin",
+    "newly_completed": 2,
+    "failed": 0,
+    "samples": [
+      {"language": "en", "mode": "single", "duration_seconds_approx": 2, "unicode_filename": true, "segments": 1},
+      {"language": "fa", "mode": "windowed_review", "duration_seconds": 65, "window_starts_seconds": [0, 30], "segments": 17, "join_method": "hybrid_safe"}
+    ],
+    "verified_export_formats": ["json", "txt", "srt", "vtt"],
+    "resume": {"newly_completed": 0, "already_complete": 2, "failed": 0},
+    "sample_media_transcripts_and_logs_published": false,
+    "accuracy_score": null
+  },
+  "refactored_inventory": {"read_only": true, "jobs": 1453, "historical_category_totals_match": true},
+  "prompt_review": {
+    "core_rules": 16,
+    "inherited_options": 14,
+    "voice_entries": 20,
+    "core_aligned_voice_entries": 9,
+    "quick_start_words": 285,
+    "manual_acceptance_scenarios": 20,
+    "live_voice_scenarios_run": 0
+  },
+  "full_transcription_batch_rerun": false
+}
